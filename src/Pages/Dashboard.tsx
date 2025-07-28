@@ -6,22 +6,25 @@ import TabsComponent from "../../components/Page2/TabsBar";
 import RightColumn from "../../components/Page2/RightColumn";
 import LeftColumn from "../../components/Page2/LeftColumn";
 import { sidebarItems } from "../../components/Page2/data";
+import { useState } from "react";
 
 const MainContent = styled(Box)`
-  margin-left: 280px;
   min-height: 100vh;
   background-color: #f8fafc;
 `;
 
 const Dashboard = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box sx={{ display: "flex", width: "100vw" }}>
-      <Sidebar sidebarItems={sidebarItems} />
+    <Box sx={{ display: "flex", width: "100vw", marginLeft: {xs: "0px", md: "280px"} }}>
+      <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Sidebar sidebarItems={sidebarItems} />
+      </Box>
 
       {/* Main Content */}
       <MainContent sx={{ width: "100%" }}>
-        <Header title="Dashboard"/>
+        <Header title="Dashboard" isOpen={isOpen} setIsOpen={setIsOpen} />
         <TabsComponent />
 
         <Box sx={{ p: 3 }}>
