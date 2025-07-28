@@ -22,7 +22,7 @@ export default function Sidebar({sidebarItems}: any) {
     <>
     <StyledDrawer variant="permanent">
     <LogoContainer>
-      <img style={{width: "100%"}} src="../src/assets/logo.png" alt="logo" />
+      <img style={{width: "100%"}} src="/logo.png" alt="logo" />
     </LogoContainer>
 
     <List sx={{ px: 2 }}>
