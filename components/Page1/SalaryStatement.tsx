@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   CardContent,
-  IconButton,
   styled,
   Typography,
 } from "@mui/material";
@@ -196,7 +195,7 @@ export default function SalaryStatement() {
                             border: "1px solid #2E90FA",
                           }}
                         >
-                          <IconButton
+                          <Box
                             sx={{ display: { xs: "none", md: "block" } }}
                           >
                             <Check
@@ -206,7 +205,7 @@ export default function SalaryStatement() {
                                 height: "16px",
                               }}
                             />
-                          </IconButton>
+                          </Box>
                           {item.status}
                         </Typography>
                         <Button
@@ -226,7 +225,7 @@ export default function SalaryStatement() {
                           <Eye style={{ width: "20px", height: "20px" }} />{" "}
                           <Typography
                             sx={{
-                              marginLeft: { xs: "5px", md: "0px" },
+                              marginLeft: { md: "5px", xs: "0px" },
                               display: { xs: "none", md: "block" },
                             }}
                           >
@@ -252,7 +251,7 @@ export default function SalaryStatement() {
                           />
                           <Typography
                             sx={{
-                              marginLeft: { xs: "5px", md: "0px" },
+                              marginLeft: { xs: "0px", sm: "5px" },
                               display: { xs: "none", md: "block" },
                             }}
                           >
