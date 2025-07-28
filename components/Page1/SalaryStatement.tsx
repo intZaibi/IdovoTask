@@ -1,4 +1,11 @@
-import { Box, Card, CardContent, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  IconButton,
+  styled,
+  Typography,
+} from "@mui/material";
 import { Calendar, Check, DownloadIcon, Eye, FileText } from "lucide-react";
 import { Button } from "@mui/material";
 
@@ -98,16 +105,18 @@ export default function SalaryStatement() {
                         gap: "20px",
                       }}
                     >
-                      <Calendar
-                        style={{
-                          width: "30px",
-                          height: "30px",
-                          border: "2px solid #E2E8F0",
-                          borderRadius: "10px",
-                          padding: "5px",
-                          strokeWidth: 1.5,
-                        }}
-                      />
+                      <Box sx={{display: {xs: "block", md: "none"}, marginRight: "10px"}}>
+                        <Calendar
+                          style={{
+                            width: "30px",
+                            height: "30px",
+                            border: "2px solid #E2E8F0",
+                            borderRadius: "10px",
+                            padding: "5px",
+                            strokeWidth: 1.5,
+                          }}
+                        />
+                      </Box>
                       <Box
                         sx={{
                           display: "flex",
@@ -187,13 +196,17 @@ export default function SalaryStatement() {
                             border: "1px solid #2E90FA",
                           }}
                         >
-                          <Check
-                            style={{
-                              color: "#2E90FA",
-                              width: "16px",
-                              height: "16px",
-                            }}
-                          />{" "}
+                          <IconButton
+                            sx={{ display: { xs: "none", md: "block" } }}
+                          >
+                            <Check
+                              style={{
+                                color: "#2E90FA",
+                                width: "16px",
+                                height: "16px",
+                              }}
+                            />
+                          </IconButton>
                           {item.status}
                         </Typography>
                         <Button
@@ -211,7 +224,14 @@ export default function SalaryStatement() {
                           }}
                         >
                           <Eye style={{ width: "20px", height: "20px" }} />{" "}
-                          <span style={{ marginLeft: "5px" }}>View</span>
+                          <Typography
+                            sx={{
+                              marginLeft: { xs: "5px", md: "0px" },
+                              display: { xs: "none", md: "block" },
+                            }}
+                          >
+                            View
+                          </Typography>
                         </Button>
                         <Button
                           variant="outlined"
@@ -229,8 +249,15 @@ export default function SalaryStatement() {
                         >
                           <DownloadIcon
                             style={{ width: "20px", height: "20px" }}
-                          />{" "}
-                          <span style={{ marginLeft: "5px" }}>Download</span>
+                          />
+                          <Typography
+                            sx={{
+                              marginLeft: { xs: "5px", md: "0px" },
+                              display: { xs: "none", md: "block" },
+                            }}
+                          >
+                            Download
+                          </Typography>
                         </Button>
                       </Box>
                     </Box>

@@ -1,7 +1,8 @@
-import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
+import { Box, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
 import styled from '@emotion/styled'
+import { X } from 'lucide-react'
 
-export default function Sidebar({sidebarItems}: any) {
+export default function Sidebar({sidebarItems, setIsOpen}: any) {
     const StyledDrawer = styled(Drawer)`
   .MuiDrawer-paper {
     width: 280px;
@@ -23,6 +24,9 @@ export default function Sidebar({sidebarItems}: any) {
     <StyledDrawer variant="permanent">
     <LogoContainer>
       <img style={{width: "100%"}} src="/logo.png" alt="logo" />
+      <IconButton sx={{display: {xs: "block", md: "none"}}} size="small" onClick={() => setIsOpen(false)}>
+        <X />
+      </IconButton>
     </LogoContainer>
 
     <List sx={{ px: 2 }}>

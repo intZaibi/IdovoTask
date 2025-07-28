@@ -1,7 +1,8 @@
-import { Box, ListItemIcon, Paper, styled, Typography } from "@mui/material";
+import { Box, IconButton, ListItemIcon, Paper, styled, Typography } from "@mui/material";
 import { Notifications, Message } from "@mui/icons-material";
+import { MenuIcon } from "lucide-react";
 
-export default function Header({ title }: { title: string }) {
+export default function Header({ title, isOpen, setIsOpen }: { title: string, isOpen: boolean, setIsOpen: (isOpen: boolean) => void }) {
   const HeaderContainer = styled(Paper)`
     padding: 24px;
     margin-bottom: 24px;
@@ -19,6 +20,14 @@ export default function Header({ title }: { title: string }) {
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+          <IconButton
+            sx={{
+              display: { xs: "block", md: "none" }
+            }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <MenuIcon />
+          </IconButton>
           <Typography variant="h4" sx={{ fontWeight: 600, color: "#1a1a1a" }}>
             {title}
           </Typography>

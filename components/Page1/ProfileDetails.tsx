@@ -24,9 +24,10 @@ export default function ProfileDetails() {
               backgroundColor: "#fff",
               padding: "10px",
               borderRadius: "10px",
+              flexDirection: {xs: "column", md: "row"},
             }}
           >
-            <Box sx={{ display: "flex", gap: "30px", alignItems: "center" }}>
+            <Box sx={{ display: "flex", gap: "30px", alignItems: "center", flexDirection: {xs: "column", md: "row"}, marginBottom: {xs: "30px", md: "0px"} }}>
               <Box
                 sx={{
                   height: "200px",
@@ -52,6 +53,7 @@ export default function ProfileDetails() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "20px",
+                  alignItems: {xs: "center", md: "flex-start"},
                 }}
               >
                 <Box

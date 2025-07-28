@@ -10,21 +10,31 @@ import RevenueReport from "../../components/Page1/RevenueReport";
 import SalaryStatement from "../../components/Page1/SalaryStatement";
 import ProfileDetails from "../../components/Page1/ProfileDetails";
 import QuickReportCard from "../../components/Page1/QuickReportCard";
+import { useState } from "react";
 
 const MainContent = styled(Box)`
-  margin-left: 280px;
   min-height: 100vh;
   background-color: #f8fafc;
 `;
 
 export default function Page1() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Box sx={{ display: "flex", width: "100vw" }}>
-      <Sidebar sidebarItems={sidebarItems} />
+      <Box
+        sx={{
+          display: {
+            xs: isOpen ? "block" : "none",
+            md: "block"
+          }
+        }}
+      >
+        <Sidebar setIsOpen={setIsOpen} sidebarItems={sidebarItems} />
+      </Box>
 
       {/* Main Content */}
-      <MainContent sx={{ width: "100%" }}>
-        <Header title="Idevo Solution’s Workspace" />
+      <MainContent sx={{ width: "100vw", marginLeft: {xs: "0px", md: "280px"} }}>
+        <Header title="Idevo Solution’s Workspace" isOpen={isOpen} setIsOpen={setIsOpen} />
         <Typography
           variant="h1"
           sx={{

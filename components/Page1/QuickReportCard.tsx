@@ -33,7 +33,7 @@ export default function QuickReportCard() {
     <Box sx={{ p: 3 }}>
           <Grid container spacing={3}>
             {data.map((item, index) => (
-              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+              <Grid size={{ xs: 12, md: 4 }} key={index}>
                 <StyledCard>
                   <CardContent>
                     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
