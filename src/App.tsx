@@ -1,5 +1,5 @@
-import Page1 from './Pages/Page1';
-import Page2 from './Pages/Page2'
+import MyProfile from './Pages/MyProfile';
+import Dashboard from './Pages/Dashboard'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
 
     <Router>
       <Routes>
-        <Route path="/page1" element={<Page1 />} />
-        <Route path="/page2" element={<Page2 />} />
+        <Route path="/myprofile" element={<MyProfile />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   )
