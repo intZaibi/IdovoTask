@@ -35,9 +35,11 @@ export default function TabsBar() {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "space-between",
         padding: "0 30px",
         width: "95%",
+        flexDirection: {xs: "column", md: "row"},
+        gap: {xs: "10px", md: "0px"},
+        justifyContent: {xs: "flex-start", md: "space-between"},
       }}
     >
       {/* Right */}

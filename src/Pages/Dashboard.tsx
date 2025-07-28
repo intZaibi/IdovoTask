@@ -17,13 +17,20 @@ const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box sx={{ display: "flex", width: "100vw", marginLeft: {xs: "0px", md: "280px"} }}>
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
-        <Sidebar sidebarItems={sidebarItems} />
+    <Box sx={{ display: "flex", width: "100vw" }}>
+      <Box
+        sx={{
+          display: {
+            xs: isOpen ? "block" : "none",
+            md: "block"
+          }
+        }}
+      >
+        <Sidebar setIsOpen={setIsOpen} sidebarItems={sidebarItems} />
       </Box>
 
       {/* Main Content */}
-      <MainContent sx={{ width: "100%" }}>
+      <MainContent sx={{ width: "100%", marginLeft: {md: "280px", sm: "0px"} }}>
         <Header title="Dashboard" isOpen={isOpen} setIsOpen={setIsOpen} />
         <TabsComponent />
 
