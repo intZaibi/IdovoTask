@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Card, CardContent, styled, Typography } from "@mui/material";
 import { Edit, Phone, Mail, Wallet } from "lucide-react";
 import ProfilePercentage from "./ProfilePercentage";
