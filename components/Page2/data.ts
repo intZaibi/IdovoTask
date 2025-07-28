@@ -1,14 +1,14 @@
-const dashboard = '../src/assets/sidebarIcons/dashboard.png';
-const proposalsIcon = '../src/assets/sidebarIcons/proposals.png';
-const projectsIcon = '../src/assets/sidebarIcons/projects.png';
-const chatIcon = '../src/assets/sidebarIcons/chat.png';
-const calendarIcon = '../src/assets/sidebarIcons/calendar.png';
-const paymentIcon = '../src/assets/sidebarIcons/invoice.png';
-const customSupportIcon = '../src/assets/sidebarIcons/custom support.png';
-const pdfIcon = '../src/assets/filetypeIcons/File type icon.png';
-const pdfIcon1 = '../src/assets/filetypeIcons/File type icon (1).png';
-const pdfIcon2 = '../src/assets/filetypeIcons/File type icon (2).png';
-const pdfIcon3 = '../src/assets/filetypeIcons/File type icon (3).png';
+const dashboard = 'sidebarIcons/dashboard.png';
+const proposalsIcon = 'sidebarIcons/proposals.png';
+const projectsIcon = 'sidebarIcons/projects.png';
+const chatIcon = 'sidebarIcons/chat.png';
+const calendarIcon = 'sidebarIcons/calendar.png';
+const paymentIcon = 'sidebarIcons/invoice.png';
+const customSupportIcon = 'sidebarIcons/custom support.png';
+const pdfIcon = 'filetypeIcons/File type icon.png';
+const pdfIcon1 = 'filetypeIcons/File type icon (1).png';
+const pdfIcon2 = 'filetypeIcons/File type icon (2).png';
+const pdfIcon3 = 'filetypeIcons/File type icon (3).png';
 
 // Sample data for charts
 export const revenueData = [

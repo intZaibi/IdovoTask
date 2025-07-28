@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, styled, Typography } from "@mui/material";
 import { Edit, Phone, Mail, Wallet } from "lucide-react";
 import ProfilePercentage from "./ProfilePercentage";
-const profileImage = "../../src/assets/profileImage.png";
+const profileImage = "/profileImage.png";
 
 export default function ProfileDetails() {
   const StyledCard = styled(Card)`
